@@ -50,5 +50,5 @@ function updateClock() {
     window.addEventListener('load', function() {
       setTimeout(function() {
         showContent();
-      }, 2000);
+      }, 2500);
     });

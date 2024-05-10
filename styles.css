@@ -19,8 +19,10 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: -webkit-linear-gradient(240deg, #ec1d25, #0d296b);
-    background: linear-gradient(-150deg, #ec1d25, #0d296b);
+    background-image: url(./z5362398173367_bf3c9322ac3a76b469c308400ab72a5c-removebg-preview.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,7 +31,7 @@ body {
 #loader .spinner {
     width: 50px;
     height: 50px;
-    border: 5px solid white;
+    border: 5px solid blue;
     border-top-color: transparent;
     border-radius: 50%;
     animation: spin 1s linear infinite;
