@@ -135,15 +135,6 @@ h1 {
     color: white;
 }
 
-.update {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    font-size: 22px;
-    margin: 0 0 30px 0;
-    text-decoration: underline;
-}
-
 .icon_zalo {
     width: 85px;
     height: 85px;
