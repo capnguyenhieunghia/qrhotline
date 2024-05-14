@@ -85,7 +85,7 @@
 .tt4 {
     position: absolute;
     /* -- */
-    display: none;
+/*     display: none; */
     /* -- */
     top: 2%;
     background-color: red;
