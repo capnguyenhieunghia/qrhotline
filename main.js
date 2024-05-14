@@ -52,3 +52,16 @@ function updateClock() {
         showContent();
       }, 3000);
     });
+// quét qr
+// Khi nút "Quét QR" được nhấn
+document.getElementById('scanButton').addEventListener('click', function() {
+  // Sử dụng thư viện ZXing để quét QR code
+  zxing.scan().then(function(result) {
+    // Khi quét thành công, hiển thị kết quả và chuyển hướng
+    document.getElementById('result').textContent = result;
+    window.location.href = result; // Chuyển hướng đến URL đã quét được
+  }).catch(function(error) {
+    // Xử lý lỗi khi quét QR code
+    console.error(error);
+  });
+});

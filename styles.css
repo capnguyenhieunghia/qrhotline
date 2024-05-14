@@ -5,6 +5,206 @@
     font-family: Arial, sans-serif;
 }
 
+/******************************* TRẠNG THÁI HOTLINE *******************************/
+/********** QR_161 **********/
+.ttt1 {
+    position: absolute;
+    top: 2%;
+    background-color: greenyellow;
+    width: 150px;
+    text-align: center;
+    padding: 5px;
+}
+
+.tt1 {
+    position: absolute;
+    /* -- */
+    display: none;
+    /* -- */
+    top: 2%;
+    background-color: red;
+    width: 150px;
+    text-align: center;
+    padding: 5px;
+}
+
+/********** QR_162 **********/
+.ttt2 {
+    position: absolute;
+    top: 2%;
+    background-color: greenyellow;
+    width: 150px;
+    text-align: center;
+    padding: 5px;
+}
+
+.tt2 {
+    position: absolute;
+    /* -- */
+    display: none;
+    /* -- */
+    top: 2%;
+    background-color: red;
+    width: 150px;
+    text-align: center;
+    padding: 5px;
+}
+
+/********** QR_163 **********/
+.ttt3 {
+    position: absolute;
+    top: 2%;
+    background-color: greenyellow;
+    width: 150px;
+    text-align: center;
+    padding: 5px;
+}
+
+.tt3 {
+    position: absolute;
+    /* -- */
+    display: none;
+    /* -- */
+    top: 2%;
+    background-color: red;
+    width: 150px;
+    text-align: center;
+    padding: 5px;
+}
+
+/********** QR_164 **********/
+.ttt4 {
+    position: absolute;
+    top: 2%;
+    background-color: greenyellow;
+    width: 150px;
+    text-align: center;
+    padding: 5px;
+}
+
+.tt4 {
+    position: absolute;
+    /* -- */
+    display: none;
+    /* -- */
+    top: 2%;
+    background-color: red;
+    width: 150px;
+    text-align: center;
+    padding: 5px;
+}
+
+/********** QR_165 **********/
+.ttt5 {
+    position: absolute;
+    top: 2%;
+    background-color: greenyellow;
+    width: 150px;
+    text-align: center;
+    padding: 5px;
+}
+
+.tt5 {
+    position: absolute;
+    /* -- */
+    display: none;
+    /* -- */
+    top: 2%;
+    background-color: red;
+    width: 150px;
+    text-align: center;
+    padding: 5px;
+}
+
+/********** QR_166 **********/
+.ttt6 {
+    position: absolute;
+    top: 2%;
+    background-color: greenyellow;
+    width: 150px;
+    text-align: center;
+    padding: 5px;
+}
+
+.tt6 {
+    position: absolute;
+    /* -- */
+    display: none;
+    /* -- */
+    top: 2%;
+    background-color: red;
+    width: 150px;
+    text-align: center;
+    padding: 5px;
+}
+
+/********** QR_167 **********/
+.ttt7 {
+    position: absolute;
+    top: 2%;
+    background-color: greenyellow;
+    width: 150px;
+    text-align: center;
+    padding: 5px;
+}
+
+.tt7 {
+    position: absolute;
+    /* -- */
+    display: none;
+    /* -- */
+    top: 2%;
+    background-color: red;
+    width: 150px;
+    text-align: center;
+    padding: 5px;
+}
+
+/********** QR_168 **********/
+.ttt8 {
+    position: absolute;
+    top: 2%;
+    background-color: greenyellow;
+    width: 150px;
+    text-align: center;
+    padding: 5px;
+}
+
+.tt8 {
+    position: absolute;
+    /* -- */
+    display: none;
+    /* -- */
+    top: 2%;
+    background-color: red;
+    width: 150px;
+    text-align: center;
+    padding: 5px;
+}
+
+/********** QR_169 **********/
+.ttt9 {
+    position: absolute;
+    top: 2%;
+    background-color: greenyellow;
+    width: 150px;
+    text-align: center;
+    padding: 5px;
+}
+
+.tt9 {
+    position: absolute;
+    /* -- */
+    display: none;
+    /* -- */
+    top: 2%;
+    background-color: red;
+    width: 150px;
+    text-align: center;
+    padding: 5px;
+}
+
+/******************************* END ******************************/
 /* CSS để làm cho trang web fullscreen */
 html,
 body {
@@ -81,6 +281,7 @@ h1 {
 }
 
 .qr .qr-it {
+    position: relative;
     border-radius: 15px;
     width: 300px;
     height: 400px;
@@ -138,22 +339,24 @@ h1 {
 .icon_zalo {
     width: 85px;
     height: 85px;
-    position:fixed;
+    position: fixed;
     z-index: 999;
     top: 80%;
     right: 0;
-    transition:  0.5s ease;
+    transition: 0.5s ease;
 }
 
 .icon_zalo:hover {
     transform: scale(1.1);
     transition: 0.5s;
 }
+
 .icon_zalo:hover::after {
     content: "Chat";
     color: rgb(17, 198, 62);
     font-size: 22px;
 }
+
 .icon_zalo img {
     width: 100%;
     height: 100%;
