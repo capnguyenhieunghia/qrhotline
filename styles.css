@@ -21,7 +21,7 @@
     font-weight: bold;
     position: absolute;
     /* -- */
-    /* display: none; */
+    display: none;
     /* -- */
     top: 2%;
     background-color: red;
@@ -91,7 +91,7 @@
 .tt4 {
     position: absolute;
     /* -- */
-/*     display: none; */
+    display: none;
     /* -- */
     top: 2%;
     background-color: red;
@@ -115,7 +115,7 @@
 .tt5 {
     position: absolute;
     /* -- */
-/*     display: none; */
+    display: none;
     /* -- */
     top: 2%;
     background-color: red;
@@ -139,7 +139,7 @@
 .tt6 {
     position: absolute;
     /* -- */
-/*     display: none; */
+    display: none;
     /* -- */
     top: 2%;
     background-color: red;
@@ -163,7 +163,7 @@
 .tt7 {
     position: absolute;
     /* -- */
-/*     display: none; */
+    display: none;
     /* -- */
     top: 2%;
     background-color: red;
@@ -187,7 +187,7 @@
 .tt8 {
     position: absolute;
     /* -- */
-/*     display: none; */
+    display: none;
     /* -- */
     top: 2%;
     background-color: red;
@@ -211,7 +211,7 @@
 .tt9 {
     position: absolute;
     /* -- */
-    /* display: none; */
+    display: none;
     /* -- */
     top: 2%;
     background-color: red;
