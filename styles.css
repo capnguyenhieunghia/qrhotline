@@ -456,6 +456,58 @@ h2 {
     font-size: 18px;
 }
 
+.of {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    font-size: 25px;
+    font-weight: bold;
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(https://www.bing.com/th/id/OGC.ed7c443d6d6d829e933f60ab4e8e6ed9?pid=1.7&rurl=https%3a%2f%2ftoigingiuvedep.vn%2fwp-content%2fuploads%2f2022%2f04%2fhinh-anh-gif-dep.gif&ehk=KohfR82xlW6hNtkPx3Q1XASgWTkMSzELdQVohEzErEs%3d);
+}
+
+.of1 body {
+    width: 90%;
+}
+
+.of1 {
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    font-size: 25px;
+    font-weight: bold;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(https://th.bing.com/th/id/R.5309ac7c892b81f06e3e1ad94f30845b?rik=9XlN6Mw9wmoI9A&pid=ImgRaw&r=0);
+}
+
+.of p {
+    text-align: center;
+    color: transparent;
+    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+    background-clip: text;
+}
+
+.of1 p {
+    color: transparent;
+    background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
+    display: flex;
+    text-align: center;
+    background-clip: text;
+}
 /* hiệu ứng */
 /* dần dần */
 /* #hudd {
