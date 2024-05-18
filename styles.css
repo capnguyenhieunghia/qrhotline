@@ -21,7 +21,7 @@
     font-weight: bold;
     position: absolute;
     /* -- */
-    /* display: none; */
+    display: none;
     /* -- */
     top: 2%;
     background-color: greenyellow;
@@ -44,10 +44,10 @@
 .tt2 {
     position: absolute;
     /* -- */
-display: none; 
+    display: none;
     /* -- */
     top: 2%;
-  background-color: greenyellow;
+    background-color: greenyellow;
     width: 150px;
     text-align: center;
     padding: 5px;
@@ -57,7 +57,7 @@ display: none;
 .ttt3 {
     position: absolute;
     top: 2%;
-     background-color: red;
+    background-color: red;
     width: 150px;
     text-align: center;
     padding: 5px;
@@ -67,10 +67,10 @@ display: none;
 .tt3 {
     position: absolute;
     /* -- */
-    /* display: none;  */
+    display: none; 
     /* -- */
     top: 2%;
-     background-color: greenyellow;
+    background-color: greenyellow;
     font-weight: bold;
     width: 150px;
     text-align: center;
@@ -91,10 +91,10 @@ display: none;
 .tt4 {
     position: absolute;
     /* -- */
-    display: none; 
+    display: none;
     /* -- */
     top: 2%;
-  background-color: greenyellow;
+    background-color: greenyellow;
     width: 150px;
     text-align: center;
     padding: 5px;
@@ -105,7 +105,7 @@ display: none;
 .ttt5 {
     position: absolute;
     top: 2%;
-        background-color: red;
+    background-color: red;
     width: 150px;
     text-align: center;
     padding: 5px;
@@ -118,7 +118,7 @@ display: none;
     display: none;
     /* -- */
     top: 2%;
-   background-color: greenyellow;
+    background-color: greenyellow;
     width: 150px;
     text-align: center;
     padding: 5px;
@@ -129,7 +129,7 @@ display: none;
 .ttt6 {
     position: absolute;
     top: 2%;
-       background-color: red;
+    background-color: red;
     width: 150px;
     text-align: center;
     padding: 5px;
@@ -142,7 +142,7 @@ display: none;
     display: none;
     /* -- */
     top: 2%;
-  background-color: greenyellow;
+    background-color: greenyellow;
     width: 150px;
     text-align: center;
     padding: 5px;
@@ -163,10 +163,10 @@ display: none;
 .tt7 {
     position: absolute;
     /* -- */
-   display: none; 
+    display: none;
     /* -- */
     top: 2%;
-  background-color: greenyellow;
+    background-color: greenyellow;
     width: 150px;
     text-align: center;
     padding: 5px;
@@ -190,7 +190,7 @@ display: none;
     display: none;
     /* -- */
     top: 2%;
-  background-color: greenyellow;
+    background-color: greenyellow;
     width: 150px;
     text-align: center;
     padding: 5px;
@@ -214,7 +214,7 @@ display: none;
     display: none;
     /* -- */
     top: 2%;
-     background-color: greenyellow;
+    background-color: greenyellow;
     width: 150px;
     text-align: center;
     padding: 5px;
@@ -273,8 +273,8 @@ h1 {
 .logo {
     display: flex;
     justify-content: center;
-    border-radius: 50%;
-    margin: 30px 0;
+    margin: 0 0 30px 0;
+    padding: 5px;
 }
 
 .logo img {
@@ -378,6 +378,82 @@ h1 {
     width: 100%;
     height: 100%;
     object-fit: contain;
+}
+
+/* đăng xuất */
+.dangxuat {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 40px 0;
+}
+
+.dangxuat-it {
+    position: relative;
+    width: 200px;
+    height: 400px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+
+.dangxuat-it img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h2 {
+    margin: 40px;
+    text-align: center;
+}
+
+.buoc {
+    position: absolute;
+    top: 50%;
+    z-index: 100;
+    background-color: #32CD32;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    width: 100px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.tonghop {
+    width: 100%;
+    height: 200px;
+}
+
+.tonghop img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#welcome-message {
+    width: 90%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    z-index: 100;
+}
+
+#welcome-message h2 {
+    margin-top: 0;
+}
+
+#welcome-message button {
+    margin-top: 20px;
+    width: 100px;
+    font-size: 18px;
 }
 
 /* hiệu ứng */

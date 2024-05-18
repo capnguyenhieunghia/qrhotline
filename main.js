@@ -14,54 +14,16 @@ function updateClock() {
   }
   
   setInterval(updateClock, 1000);
-  // day y
-  window.onload = function() {
-    var currentDate = new Date();
-    var day = currentDate.getDate();
-    var month = currentDate.getMonth() + 1;
-    var year = currentDate.getFullYear();
-  
-    var dateElement = document.getElementById("date");
-    dateElement.innerHTML = "Ngày " + day + " tháng " + month + " năm " + year;
-  };
-      // JavaScript để thực hiện hiệu ứng trượt từ dưới lên và hiển thị nội dung trang web
-    
-    // Hiệu ứng trượt từ dưới lên và hiển thị nội dung
-    function showContent() {
-      var loader = document.getElementById('loader');
-      var content = document.getElementById('content');
-      
-      // Hiệu ứng trượt từ dưới lên
-      loader.style.display = 'none';
-      content.style.display = 'block';
-      content.style.transform = 'translateY(100%)';
-      content.style.transition = 'transform 0.5s ease-in';
-      setTimeout(function() {
-        content.style.transform = 'translateY(0)';
-      }, 100);
-      
-      // Tắt hiệu ứng và hiển thị nội dung trang web
-      setTimeout(function() {
-        content.style.transition = '';
-      }, 600);
-    }
-    
-    // Tự động bật hiệu ứng khi tải trang
-    window.addEventListener('load', function() {
-      setTimeout(function() {
-        showContent();
-      }, 3000);
+  window.addEventListener('load', function () {
+    var welcomeMessage = document.getElementById('welcome-message');
+    var closeButton = document.getElementById('close-button');
+
+    // Show the welcome message
+    welcomeMessage.style.display = 'block';
+
+    // Add a click event listener to the close button
+    closeButton.addEventListener('click', function () {
+        // Hide the welcome message
+        welcomeMessage.style.display = 'none';
     });
-// quét qr
-// Khi nút "Quét QR" được nhấn
-document.getElementById('scanButton').addEventListener('click', function() {
-  // Sử dụng thư viện ZXing để quét QR code
-  zxing.scan().then(function(result) {
-    // Khi quét thành công, hiển thị kết quả và chuyển hướng
-    document.getElementById('result').textContent = result;
-    window.location.href = result; // Chuyển hướng đến URL đã quét được
-  }).catch(function(error) {
-    // Xử lý lỗi khi quét QR code
-    console.error(error);
-  });
 });
