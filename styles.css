@@ -21,7 +21,7 @@
     font-weight: bold;
     position: absolute;
     /* -- */
-    display: none;
+    /* display: none; */
     /* -- */
     top: 2%;
     background-color: greenyellow;
@@ -67,7 +67,7 @@
 .tt3 {
     position: absolute;
     /* -- */
-    display: none; 
+    /* display: none;  */
     /* -- */
     top: 2%;
     background-color: greenyellow;
@@ -211,7 +211,7 @@
 .tt9 {
     position: absolute;
     /* -- */
-    display: none;
+    /* display: none; */
     /* -- */
     top: 2%;
     background-color: greenyellow;
