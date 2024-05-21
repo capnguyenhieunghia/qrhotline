@@ -223,6 +223,16 @@
 
 /******************************* END ******************************/
 /* CSS để làm cho trang web fullscreen */
+.dauso{
+    width: 90%;
+    height: 200px;
+    margin: 0 auto;
+}
+.dauso img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
 html,
 body {
     margin: 0;
