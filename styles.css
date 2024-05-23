@@ -44,7 +44,7 @@
 .tt2 {
     position: absolute;
     /* -- */
-    display: none;
+    /* display: none; */
     /* -- */
     top: 2%;
     background-color: greenyellow;
@@ -67,7 +67,7 @@
 .tt3 {
     position: absolute;
     /* -- */
-    /* display: none;  */
+    display: none; 
     /* -- */
     top: 2%;
     background-color: greenyellow;
@@ -139,7 +139,7 @@
 .tt6 {
     position: absolute;
     /* -- */
-    /*     display: none; */
+        display: none;
     /* -- */
     top: 2%;
     background-color: greenyellow;
@@ -163,7 +163,7 @@
 .tt7 {
     position: absolute;
     /* -- */
-    /*     display: none; */
+        display: none;
     /* -- */
     top: 2%;
     background-color: greenyellow;
