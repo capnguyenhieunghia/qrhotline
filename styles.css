@@ -68,16 +68,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+
 }
 
 .mk::after {
     content: "Mật Khẩu";
-    color: black;
-    margin-left: -100px;
+    font-weight: bold;
 
 }
-
+.mk p{
+    display: none;
+}
 .mk i {
     position: absolute;
     right: 5%;
@@ -96,6 +97,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    font-weight: bold;
 }
 
 .ip i {
@@ -106,7 +108,14 @@
     background: linear-gradient(-150deg, #ec1d25, #0d296b);
     background-clip: text;
 }
-
+/* .ip p{
+    display: none;
+}
+.ip::after{
+    content: "IP Server";
+    color: black;
+    font-weight: bold;
+} */
 .phone {
     text-align: center;
     margin: 20px 0 0 0;
