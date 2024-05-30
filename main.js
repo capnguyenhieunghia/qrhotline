@@ -49,6 +49,6 @@ ipElements.forEach(element => {
     // Lấy nội dung của phần tử và copy vào clipboard
     const content = element.querySelector('p').textContent;
     navigator.clipboard.writeText(content);
-    alert('Đã sao chép nội dung IP!');
+    alert('Đã sao chép nội dung IP Server!');
   });
 });
