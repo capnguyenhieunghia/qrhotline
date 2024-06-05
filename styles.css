@@ -71,14 +71,7 @@
 
 }
 
-.mk::after {
-    content: "Mật Khẩu";
-    font-weight: bold;
 
-}
-.mk p{
-    display: none;
-}
 .mk i {
     position: absolute;
     right: 5%;
