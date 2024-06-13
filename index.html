@@ -1,35 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotline tư vấn</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-  <div class="logo" id="hutop"><img src="https://itc.edu.vn/Data/Sites/1/media/img/logo.png" alt="logo"></div>
-  <div id="card-container"></div>
-  <div id="copy-notification" class="copy-notification">Copied to clipboard!</div>
-  <H2 style="text-align: center; margin: 30px 0 0 0;">HƯỚNG DẪN ĐĂNG XUẤT BUSSCALL</H2>
-  <div class="dangxuat">
-      <div class="dangxuat-it"><img src="./image/b1.jpg" alt="">
-          <div class="buoc">Bước 01</div>
-      </div>
-      <div class="dangxuat-it"><img src="./image/b2.jpg" alt="">
-          <div class="buoc">Bước 02</div>
-      </div>
-      <div class="dangxuat-it"><img src="./image/b3.jpg" alt="">
-          <div class="buoc">Bước 03</div>
-      </div>
-      <div class="dangxuat-it"><img src="./image/b4.jpg" alt="">
-          <div class="buoc">Bước 04</div>
-      </div>
-      <div class="dangxuat-it"><img src="./image/b5.jpg" alt="">
-          <div class="buoc">Bước 05</div>
-      </div>
-  </div>
-</div>
-<div class="cuoi">Mọi Vấn Đề Vui Lòng Liên Hệ Phòng Tuyển Sinh Và Truyền Thông</div>
-  <script src="main.js"></script>
+    <div class="logo" id="hutop"><img src="https://itc.edu.vn/Data/Sites/1/media/img/logo.png" alt="logo"></div>
+    <div id="card-container"></div>
+    <div id="copy-notification" class="copy-notification">Copied to clipboard!</div>
+    <H2 style="text-align: center; margin: 30px 0 0 0;">HƯỚNG DẪN ĐĂNG XUẤT BUSSCALL</H2>
+    <div class="dangxuat">
+        <div class="dangxuat-it"><img src="./image/b1.jpg" alt="">
+            <div class="buoc">Bước 01</div>
+        </div>
+        <div class="dangxuat-it"><img src="./image/b2.jpg" alt="">
+            <div class="buoc">Bước 02</div>
+        </div>
+        <div class="dangxuat-it"><img src="./image/b3.jpg" alt="">
+            <div class="buoc">Bước 03</div>
+        </div>
+        <div class="dangxuat-it"><img src="./image/b4.jpg" alt="">
+            <div class="buoc">Bước 04</div>
+        </div>
+        <div class="dangxuat-it"><img src="./image/b5.jpg" alt="">
+            <div class="buoc">Bước 05</div>
+        </div>
+    </div>
+    </div>
+    <div class="cuoi">Mọi Vấn Đề Vui Lòng Liên Hệ Phòng Tuyển Sinh Và Truyền Thông</div>
+    <script>function copyToClipboard(text) {
+            navigator.clipboard.writeText(text)
+                .then(() => {
+                    const notification = document.getElementById('copy-notification');
+                    notification.style.opacity = '1';
+                    setTimeout(() => {
+                        notification.style.opacity = '0';
+                    }, 2000);
+                    console.log('Text copied to clipboard:', text);
+                })
+                .catch((error) => {
+                    console.error('Failed to copy text:', error);
+                });
+        }
+
+        fetch('https://docs.google.com/spreadsheets/d/1wmVxlgrp4gHr-0y6RxY-_t_oZh5aFgBD2A8DQFHfkpM/export?format=csv')
+            .then(response => response.text())
+            .then(data => {
+                const rows = data.trim().split('\n');
+                const cardContainer = document.getElementById('card-container');
+
+                rows.forEach((row, index) => {
+                    if (index > 0) { // Skip the header row
+                        const [tenMayNhanh, matKhau, ipServer, trangThai] = row.split(',');
+                        const statusClass = trangThai.trim().toLowerCase() === 'Đang Hoạt Động' ? 'active' : 'inactive';
+
+                        const card = document.createElement('div');
+                        card.classList.add('card');
+                        card.innerHTML = `
+            <h3>${tenMayNhanh}</h3>
+            <p>Mật khẩu: ${matKhau} <span class="copy-btn" onclick="copyToClipboard('${matKhau}')">Copy</span></p>
+            <p>IP server: ${ipServer} <span class="copy-btn" onclick="copyToClipboard('${ipServer}')">Copy</span></p>
+            <p id="tt" class="${statusClass}">Trạng thái: ${trangThai}</p>
+          `;
+                        cardContainer.appendChild(card);
+                    }
+                });
+            })
+            .catch(error => console.error('Error:', error));</script>
 </body>
+
 </html>
