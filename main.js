@@ -1,39 +1,39 @@
+function copyToClipboard(text) {
+  navigator.clipboard.writeText(text)
+    .then(() => {
+      const notification = document.getElementById('copy-notification');
+      notification.style.opacity = '1';
+      setTimeout(() => {
+        notification.style.opacity = '0';
+      }, 2000);
+      console.log('Text copied to clipboard:', text);
+    })
+    .catch((error) => {
+      console.error('Failed to copy text:', error);
+    });
+}
 
-window.addEventListener('load', function () {
-  var welcomeMessage = document.getElementById('welcome-message');
-  var closeButton = document.getElementById('close-button');
+fetch('https://docs.google.com/spreadsheets/d/1wmVxlgrp4gHr-0y6RxY-_t_oZh5aFgBD2A8DQFHfkpM/export?format=csv')
+  .then(response => response.text())
+  .then(data => {
+    const rows = data.trim().split('\n');
+    const cardContainer = document.getElementById('card-container');
 
-  // Show the welcome message
-  welcomeMessage.style.display = 'block';
+    rows.forEach((row, index) => {
+      if (index > 0) { // Skip the header row
+        const [tenMayNhanh, matKhau, ipServer, trangThai] = row.split(',');
+        const statusClass = trangThai.trim().toLowerCase() === 'hoạt động' ? 'active' : 'inactive';
 
-  // Add a click event listener to the close button
-  closeButton.addEventListener('click', function () {
-      // Hide the welcome message
-      welcomeMessage.style.display = 'none';
-  });
-});
-
-// sao chép nội dung
-// Lấy tất cả các phần tử có class "mk" và "ip"
-const mkElements = document.querySelectorAll('.mk');
-const ipElements = document.querySelectorAll('.ip');
-
-// Thêm sự kiện click cho các phần tử có class "mk"
-mkElements.forEach(element => {
-element.addEventListener('click', () => {
-  // Lấy nội dung của phần tử và copy vào clipboard
-  const content = element.querySelector('p').textContent;
-  navigator.clipboard.writeText(content);
-  alert('Đã sao chép nội dung mật khẩu!');
-});
-});
-
-// Thêm sự kiện click cho các phần tử có class "ip"
-ipElements.forEach(element => {
-element.addEventListener('click', () => {
-  // Lấy nội dung của phần tử và copy vào clipboard
-  const content = element.querySelector('p').textContent;
-  navigator.clipboard.writeText(content);
-  alert('Đã sao chép nội dung IP Server!');
-});
-});
+        const card = document.createElement('div');
+        card.classList.add('card');
+        card.innerHTML = `
+          <h3>${tenMayNhanh}</h3>
+          <p>Mật khẩu: ${matKhau} <span class="copy-btn" onclick="copyToClipboard('${matKhau}')">Copy</span></p>
+          <p>IP server: ${ipServer} <span class="copy-btn" onclick="copyToClipboard('${ipServer}')">Copy</span></p>
+          <p id="tt" class="${statusClass}">Trạng thái: ${trangThai}</p>
+        `;
+        cardContainer.appendChild(card);
+      }
+    });
+  })
+  .catch(error => console.error('Error:', error));

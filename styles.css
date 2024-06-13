@@ -1,133 +1,8 @@
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-/* ///////////////////////////////////////////// */
-.buscall {
-    width: 100%;
-    height: auto;
-    margin: 20px 0;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 20px;
-}
-
-.call {
-    width: 300px;
-    height: 350px;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    justify-content: start;
-    padding: 10px;
-    gap: 10px;
-    border-radius: 10px;
-}
-
-.call h2 {
-    margin: 20px 0;
-    text-align: center;
-    color: transparent;
-    background: -webkit-linear-gradient(240deg, #ec1d25, #0d296b);
-    background: linear-gradient(-150deg, #ec1d25, #0d296b);
-    background-clip: text;
-}
-
-.call i {
-    font-size: 20px;
-
-}
-
-.name {
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
-    border-radius: 10px;
-    width: 100%;
-    height: 40px;
-    padding: 15px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    color: #0d296b;
-    font-weight: bold;
-}
-
-.mk {
-    position: relative;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
-    border-radius: 10px;
-    width: 100%;
-    height: 40px;
-    padding: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-
-
-.mk i {
-    position: absolute;
-    right: 5%;
-    color: transparent;
-    background: -webkit-linear-gradient(240deg, #ec1d25, #0d296b);
-    background: linear-gradient(-150deg, #ec1d25, #0d296b);
-    background-clip: text;
-}
-.ip {
-    position: relative;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
-    border-radius: 10px;
-    width: 100%;
-    height: 40px;
-    padding: 15px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-weight: bold;
-}
-
-.ip i {
-    position: absolute;
-    right: 5%;
-    color: transparent;
-    background: -webkit-linear-gradient(240deg, #ec1d25, #0d296b);
-    background: linear-gradient(-150deg, #ec1d25, #0d296b);
-    background-clip: text;
-}
-/* .ip p{
-    display: none;
-}
-.ip::after{
-    content: "IP Server";
-    color: black;
-    font-weight: bold;
-} */
-.phone {
-    text-align: center;
-    margin: 20px 0 0 0;
-}
-
-/* ////////////////////////////////////////////// */
-
-
-html,
-body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
-
-
-h1 {
-    text-align: center;
-    margin: 20px;
+    font-family: sans-serif;
 }
 
 .logo {
@@ -141,65 +16,81 @@ h1 {
     border-radius: 50%;
 }
 
-
-/* ////////////////////////////////////////////// */
-/* dong ho */
-.dongho {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    font-weight: bold;
-    color: transparent;
-    background: -webkit-linear-gradient(240deg, #ec1d25, #0d296b);
-    background: linear-gradient(-150deg, #ec1d25, #0d296b);
-    background-clip: text;
-}
-
-/* ////////////////////////////////////////////// */
-.cuoi {
+.card {
+    position: relative;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 400px;
     text-align: center;
-    background-color: black;
-    align-items: center;
+    height: 230px;
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    gap: 22px;
+    font-size: 18px;
+}
+
+#tt {
+    position: absolute;
+    top: 2%;
+    left: 0;
+    font-size: 16px;
+    border-radius: 0;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.card h3 {}
+
+.card p {
+    border-radius: 10px;
+    padding: 5px;
+}
+
+#card-container {
     width: 100%;
-    height: 50px;
-    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.active {
     color: white;
+    background-color: #4CAF50;
 }
 
-/* ////////////////////////////////////////////// */
-.icon_zalo {
-    width: 85px;
-    height: 85px;
+.inactive {
+    color: white;
+    background-color: red;
+}
+
+.copy-btn {
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    right: 5%;
+    font-size: 16px;
+    background-color: navy;
+    width: 50px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.copy-notification {
     position: fixed;
-    z-index: 999;
-    top: 80%;
+    top: 20px;
     right: 0;
-    transition: 0.5s ease;
+    background-color: navy;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    z-index: 9999;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
-.icon_zalo:hover {
-    transform: scale(1.1);
-    transition: 0.5s;
-}
-
-.icon_zalo:hover::after {
-    content: "Chat";
-    color: rgb(17, 198, 62);
-    font-size: 22px;
-}
-
-.icon_zalo img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-/* ////////////////////////////////////////////// */
 /* đăng xuất */
 .dangxuat {
     width: 100%;
@@ -248,182 +139,25 @@ h1 {
     object-fit: contain;
 }
 
-/* ////////////////////////////////////////////// */
-.welcome {
-    position: fixed;
-    top: 13%;
-    left: 50%;
-    width: 90%;
-    z-index: 100;
-}
-
-#welcome-message {
-    width: 100%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+.cuoi {
     text-align: center;
-}
-
-#welcome-message h2 {
-    margin-top: 0;
-}
-
-#welcome-message button {
-    margin-top: 20px;
-    width: 100px;
+    background-color: black;
+    color: white;
+    padding: 20px 0;
     font-size: 18px;
 }
 
-/* ////////////////////////////////////////////// */
-.of {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    position: relative;
-    font-size: 25px;
-    font-weight: bold;
-    background-repeat: repeat;
-    background-size: cover;
-    background-position: center;
-    background-image: url(https://www.bing.com/th/id/OGC.ed7c443d6d6d829e933f60ab4e8e6ed9?pid=1.7&rurl=https%3a%2f%2ftoigingiuvedep.vn%2fwp-content%2fuploads%2f2022%2f04%2fhinh-anh-gif-dep.gif&ehk=KohfR82xlW6hNtkPx3Q1XASgWTkMSzELdQVohEzErEs%3d);
-}
-
-.of1 body {
-    width: 90%;
-}
-
-.of1 {
-    text-align: center;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    font-size: 25px;
-    font-weight: bold;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-image: url(https://th.bing.com/th/id/R.5309ac7c892b81f06e3e1ad94f30845b?rik=9XlN6Mw9wmoI9A&pid=ImgRaw&r=0);
-}
-
-.of p {
-    text-align: center;
-    color: transparent;
-    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
-    background-clip: text;
-}
-
-.of1 p {
-    color: transparent;
-    background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
-    display: flex;
-    text-align: center;
-    background-clip: text;
-}
-
-/* hiệu ứng */
-#hudd {
+#tt {
     opacity: 0;
-    animation: hudd 10s forwards;
+    animation: tt 10s forwards;
 }
 
-@keyframes hudd {
+@keyframes tt {
     from {
         opacity: 0;
     }
 
     to {
         opacity: 1;
-    }
-}
-
-#hutop {
-    transform: translateY(-100%);
-    animation: hutop 5s forwards;
-}
-
-@keyframes hutop {
-    from {
-        transform: translateY(-100%);
-    }
-
-    to {
-        transform: translateY(0);
-    }
-}
-
-#hutopp {
-    transform: translateY(-100%);
-    animation: hutopp 3s forwards;
-}
-
-@keyframes hutopp {
-    from {
-        transform: translateY(-100%);
-    }
-
-    to {
-        transform: translateY(0);
-    }
-}
-
-/* trái sang */
-#huleft {
-    transform: translateX(-100%);
-    animation: huleft 5s forwards;
-}
-
-@keyframes huleft {
-    from {
-        transform: translateX(-100%);
-    }
-
-    to {
-        transform: translateX(0);
-    }
-}
-
-/* phải sang */
-#huright {
-    opacity: 0;
-    transform: translateX(100%);
-    animation: huright 5s forwards;
-}
-
-@keyframes huright {
-    from {
-        opacity: 0;
-        transform: translateX(100%);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-/* Hiệu Ứng Từ dưới lên */
-#hubot {
-    transform: translateY(100%);
-    animation: hubot 5s forwards;
-}
-
-@keyframes hubot {
-    from {
-        transform: translateY(100%);
-    }
-
-    to {
-        transform: translateY(0);
     }
 }

@@ -1,189 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>QR_Hotline</title>
+    <title>Hotline tư vấn</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="./image/icon_phone.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="trangthai.css">
-        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
-
 <body>
-    <div class="on">
-        <div class="logo" id="hutop"><img src="https://itc.edu.vn/Data/Sites/1/media/img/logo.png" alt="logo"></div>
-        <!-- Hiệu ứng welcome -->
-        <div class="welcome" id="hutopp">
-            <div id="welcome-message">
-                <h2 style="color: red;">THẦY CÔ LƯU Ý</h2>
-                <p style="color: black; font-weight: bold; font-size: 14px; margin: 20px 0;">Sau
-                    khi gọi tư vấn xong thầy cô vui lòng đăng xuất hệ thống.</p>
-                <button id="close-button">Close</button>
-            </div>
-        </div>
-        <!-- Mã QR -->
-        <div class="icon_zalo" id="hubot">
-            <a href="https://zalo.me/0938861080"> <img src="./image/hl.png" alt=""></a>
-        </div>
-        <!-- // -->
-        <div class="buscall">
-            <!-- 2 -->
-            <div class="call">
-                <h2>BUSSCALL</h2>
-                <p>Tên Máy nhánh</p>
-                <div class="name">
-                  <p>162</p>
-                </div>
-                <p>Mật Khẩu</p>
-                <div class="mk">
-                  <p>f@f1s8mgu91</p><i class="fa-solid fa-copy copy-btn"></i>
-                </div>
-                <p>IP Server</p>
-                <div class="ip">
-                  <p>203.162.56.243</p><i class="fa-regular fa-copy"></i>
-                </div>
-            
-              </div>
-            <!-- 3 -->
-            <div class="call">
-                <h2>BUSSCALL</h2>
-                <p>Tên Máy nhánh</p>
-                <div class="name">
-                    <p>163</p>
-                </div>
-                <p>Mật Khẩu</p>
-                <div class="mk">
-                    <p>mp@6fp949ne</p><i class="fa-solid fa-copy copy-btn"></i>
-                </div>
-                <p>IP Server</p>
-                <div class="ip">
-                    <p>203.162.56.243</p><i class="fa-regular fa-copy"></i>
-                </div>
-            </div>
-            <!-- 4 -->
-            <div class="call">
-                <h2>BUSSCALL</h2>
-                <p>Tên Máy nhánh</p>
-                <div class="name">
-                    <p>164</p>
-                </div>
-                <p>Mật Khẩu</p>
-                <div class="mk">
-                    <p>z81r2@3elac</p><i class="fa-solid fa-copy copy-btn"></i>
-                </div>
-                <p>IP Server</p>
-                <div class="ip">
-                    <p>203.162.56.243</p><i class="fa-regular fa-copy"></i>
-                </div>
-            </div>
-            <!-- 5 -->
-            <div class="call">
-                <h2>BUSSCALL</h2>
-                <p>Tên Máy nhánh</p>
-                <div class="name">
-                    <p>165</p>
-                </div>
-                <p>Mật Khẩu</p>
-                <div class="mk">
-                    <p>@o4mb488t3r</p><i class="fa-solid fa-copy copy-btn"></i>
-                </div>
-                <p>IP Server</p>
-                <div class="ip">
-                    <p>203.162.56.243</p><i class="fa-regular fa-copy"></i>
-                </div>
-            </div>
-            <!-- 6 -->
-            <div class="call">
-                <h2>BUSSCALL</h2>
-                <p>Tên Máy nhánh</p>
-                <div class="name">
-                    <p>166</p>
-                </div>
-                <p>Mật Khẩu</p>
-                <div class="mk">
-                    <p>s1@4dyc1r03</p><i class="fa-solid fa-copy copy-btn"></i>
-                </div>
-                <p>IP Server</p>
-                <div class="ip">
-                    <p>203.162.56.243</p><i class="fa-regular fa-copy"></i>
-                </div>
-            </div>
-            <!-- 7 -->
-            <div class="call">
-                <h2>BUSSCALL</h2>
-                <p>Tên Máy nhánh</p>
-                <div class="name">
-                    <p>167</p>
-                </div>
-                <p>Mật Khẩu</p>
-                <div class="mk">
-                    <p>6qvm@onq31z</p><i class="fa-solid fa-copy copy-btn"></i>
-                </div>
-                <p>IP Server</p>
-                <div class="ip">
-                    <p>203.162.56.243</p><i class="fa-regular fa-copy"></i>
-                </div>
-            </div>
-            <!-- 8 -->
-            <div class="call">
-                <h2>BUSSCALL</h2>
-                <p>Tên Máy nhánh</p>
-                <div class="name">
-                    <p>168</p>
-                </div>
-                <p>Mật Khẩu</p>
-                <div class="mk">
-                    <p>ec4u4@dayb2</p><i class="fa-solid fa-copy copy-btn"></i>
-                </div>
-                <p>IP Server</p>
-                <div class="ip">
-                    <p>203.162.56.243</p><i class="fa-regular fa-copy"></i>
-                </div>
-            </div>
-            <!-- 9 -->
-            <div class="call">
-                <h2>BUSSCALL</h2>
-                <p>Tên Máy nhánh</p>
-                <div class="name">
-                    <p>169</p>
-                </div>
-                <p>Mật Khẩu</p>
-                <div class="mk">
-                    <p>7c28@hnf3mcc</p><i class="fa-solid fa-copy copy-btn"></i>
-                </div>
-                <p>IP Server</p>
-                <div class="ip">
-                    <p>203.162.56.243</p><i class="fa-regular fa-copy"></i>
-                </div>
-            </div>
-        </div>
-        <!-- // -->
-        <H2 style="text-align: center;">HƯỚNG DẪN ĐĂNG XUẤT BUSSCALL</H2>
-        <div class="dangxuat">
-            <div class="dangxuat-it"><img src="./image/b1.jpg" alt="">
-                <div class="buoc">Bước 01</div>
-            </div>
-            <div class="dangxuat-it"><img src="./image/b2.jpg" alt="">
-                <div class="buoc">Bước 02</div>
-            </div>
-            <div class="dangxuat-it"><img src="./image/b3.jpg" alt="">
-                <div class="buoc">Bước 03</div>
-            </div>
-            <div class="dangxuat-it"><img src="./image/b4.jpg" alt="">
-                <div class="buoc">Bước 04</div>
-            </div>
-            <div class="dangxuat-it"><img src="./image/b5.jpg" alt="">
-                <div class="buoc">Bước 05</div>
-            </div>
-        </div>
-    </div>
-    <div class="cuoi">Mọi Vấn Đề Vui Lòng Liên Hệ Phòng Tuyển Sinh Và Truyền Thông</div>
+  <div class="logo" id="hutop"><img src="https://itc.edu.vn/Data/Sites/1/media/img/logo.png" alt="logo"></div>
+  <div id="card-container"></div>
+  <div id="copy-notification" class="copy-notification">Copied to clipboard!</div>
+  <H2 style="text-align: center; margin: 30px 0 0 0;">HƯỚNG DẪN ĐĂNG XUẤT BUSSCALL</H2>
+  <div class="dangxuat">
+      <div class="dangxuat-it"><img src="./image/b1.jpg" alt="">
+          <div class="buoc">Bước 01</div>
+      </div>
+      <div class="dangxuat-it"><img src="./image/b2.jpg" alt="">
+          <div class="buoc">Bước 02</div>
+      </div>
+      <div class="dangxuat-it"><img src="./image/b3.jpg" alt="">
+          <div class="buoc">Bước 03</div>
+      </div>
+      <div class="dangxuat-it"><img src="./image/b4.jpg" alt="">
+          <div class="buoc">Bước 04</div>
+      </div>
+      <div class="dangxuat-it"><img src="./image/b5.jpg" alt="">
+          <div class="buoc">Bước 05</div>
+      </div>
+  </div>
+</div>
+<div class="cuoi">Mọi Vấn Đề Vui Lòng Liên Hệ Phòng Tuyển Sinh Và Truyền Thông</div>
+  <script src="main.js"></script>
 </body>
-<script src="./main.js"></script>
-
 </html>
