@@ -22,7 +22,7 @@ fetch('https://docs.google.com/spreadsheets/d/1wmVxlgrp4gHr-0y6RxY-_t_oZh5aFgBD2
     rows.forEach((row, index) => {
       if (index > 0) { // Skip the header row
         const [tenMayNhanh, matKhau, ipServer, trangThai] = row.split(',');
-        const statusClass = trangThai.trim().toLowerCase() === 'hoạt động' ? 'active' : 'inactive';
+        const statusClass = trangThai.trim().toLowerCase() === 'đang hoạt động' ? 'active' : 'inactive';
 
         const card = document.createElement('div');
         card.classList.add('card');
