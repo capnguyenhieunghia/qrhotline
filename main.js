@@ -22,14 +22,14 @@ fetch('https://docs.google.com/spreadsheets/d/1wmVxlgrp4gHr-0y6RxY-_t_oZh5aFgBD2
     rows.forEach((row, index) => {
       if (index > 0) { // Skip the header row
         const [tenMayNhanh, matKhau, ipServer, trangThai] = row.split(',');
-        const statusClass = trangThai.trim().toLowerCase() === 'đang hoạt động' ? 'active' : 'inactive';
+        const statusClass = trangThai.trim().toLowerCase() === 'hoạt động' ? 'active' : 'inactive';
 
         const card = document.createElement('div');
         card.classList.add('card');
         card.innerHTML = `
           <h3>${tenMayNhanh}</h3>
-          <p>Mật khẩu: ${matKhau} <span class="copy-btn" onclick="copyToClipboard('${matKhau}')">Copy</span></p>
-          <p>IP server: ${ipServer} <span class="copy-btn" onclick="copyToClipboard('${ipServer}')">Copy</span></p>
+          <p>Mật khẩu ${matKhau} <span class="copy-btn" onclick="copyToClipboard('${matKhau}')">Copy</span></p>
+          <p>IP server ${ipServer} <span class="copy-btn" onclick="copyToClipboard('${ipServer}')">Copy</span></p>
           <p id="tt" class="${statusClass}"> ${trangThai}</p>
         `;
         cardContainer.appendChild(card);
