@@ -25,7 +25,12 @@ function disableWebsite() {
 
   const disableMessage = document.createElement('div');
   disableMessage.classList.add('disable-message');
-  disableMessage.textContent = 'Website đang đóng từ 21:00 - 08:00.';
+
+  if (new Date().getHours() >= 21 || new Date().getHours() < 8) {
+    disableMessage.textContent = 'Website đang đóng (từ 21:00 - 08:00).';
+  } else if (new Date().getHours() >= 11 && new Date().getHours() < 13) {
+    disableMessage.textContent = 'Website đang đóng (từ 11:00 - 13:00).';
+  }
 
   if (!document.querySelector('.disable-message')) {
     document.body.appendChild(disableMessage);
@@ -45,12 +50,14 @@ function checkWebsiteStatus() {
   const currentTime = new Date();
   const currentHour = currentTime.getHours();
 
-  if (currentHour >= 21 || currentHour < 8) {
+  if ((currentHour >= 21 && currentHour < 24) || (currentHour >= 0 && currentHour < 8) || (currentHour >= 11 && currentHour < 13)) {
     disableWebsite();
   } else {
     enableWebsite();
   }
 }
+
+setInterval(checkWebsiteStatus, 1000);
 
 setInterval(checkWebsiteStatus, 1000);
 
