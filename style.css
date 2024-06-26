@@ -9,6 +9,15 @@
     display: none;
 
 }
+.disabled .card{
+    background-image: url(./image/okhoa.jpg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.disabled .card p{
+    display: none;
+}
 
 .disabled #tt {
     display: none;
@@ -215,14 +224,6 @@
     object-fit: contain;
 }
 
-.cuoi {
-    text-align: center;
-    background-color: black;
-    color: white;
-    padding: 5px 0;
-    font-size: 17px;
-}
-
 #hutop {
     transform: translateY(-100%);
     animation: hutop 5s forwards;
@@ -235,5 +236,10 @@
 
     to {
         transform: translateY(0);
+    }
+}
+@media only screen and (max-width: 600px) {
+    body{
+        padding: 10px;
     }
 }
