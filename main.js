@@ -7,11 +7,52 @@ function copyToClipboard(text) {
         notification.style.opacity = '0';
       }, 2000);
       console.log('Text copied to clipboard:', text);
+
+      // Tạo hiệu ứng pháo hoa
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
     })
     .catch((error) => {
       console.error('Failed to copy text:', error);
     });
 }
+
+function disableWebsite() {
+  document.body.classList.add('disabled');
+
+  const disableMessage = document.createElement('div');
+  disableMessage.classList.add('disable-message');
+  disableMessage.textContent = 'Website đang đóng từ 21:00 - 08:00.';
+
+  if (!document.querySelector('.disable-message')) {
+    document.body.appendChild(disableMessage);
+  }
+}
+
+function enableWebsite() {
+  document.body.classList.remove('disabled');
+
+  const disableMessage = document.querySelector('.disable-message');
+  if (disableMessage) {
+    document.body.removeChild(disableMessage);
+  }
+}
+
+function checkWebsiteStatus() {
+  const currentTime = new Date();
+  const currentHour = currentTime.getHours();
+
+  if (currentHour >= 21 || currentHour < 8) {
+    disableWebsite();
+  } else {
+    enableWebsite();
+  }
+}
+
+setInterval(checkWebsiteStatus, 1000);
 
 fetch('https://docs.google.com/spreadsheets/d/1wmVxlgrp4gHr-0y6RxY-_t_oZh5aFgBD2A8DQFHfkpM/export?format=csv')
   .then(response => response.text())
@@ -28,8 +69,8 @@ fetch('https://docs.google.com/spreadsheets/d/1wmVxlgrp4gHr-0y6RxY-_t_oZh5aFgBD2
         card.classList.add('card');
         card.innerHTML = `
           <h3>${tenMayNhanh}</h3>
-          <p>Mật khẩu ${matKhau} <span class="copy-btn" onclick="copyToClipboard('${matKhau}')">Copy</span></p>
-          <p>IP server ${ipServer} <span class="copy-btn" onclick="copyToClipboard('${ipServer}')">Copy</span></p>
+          <p>Mật khẩu: ${matKhau} <span class="copy-btn" onclick="copyToClipboard('${matKhau}')">Copy</span></p>
+          <p>IP server: ${ipServer} <span class="copy-btn" onclick="copyToClipboard('${ipServer}')">Copy</span></p>
           <p id="tt" class="${statusClass}"> ${trangThai}</p>
         `;
         cardContainer.appendChild(card);
